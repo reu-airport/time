@@ -24,6 +24,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("io.springfox:springfox-boot-starter:3.0.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
+    implementation("org.springframework.boot:spring-boot-starter-amqp")
     testImplementation("io.projectreactor:reactor-test")
 }
 
