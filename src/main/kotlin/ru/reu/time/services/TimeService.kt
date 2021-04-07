@@ -21,8 +21,7 @@ class TimeService {
 
     fun currentTime() =
         TimeVO(
-            Instant
-                .now(),
+            Instant.now().toEpochMilli(),
             DELAY_MS * currentFactor
         ).also { log.info("Current time: $it and factor: $currentFactor") }
 
