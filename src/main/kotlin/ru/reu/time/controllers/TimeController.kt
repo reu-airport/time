@@ -15,6 +15,9 @@ class TimeController(
     private val timeService: TimeService
 ) {
 
+    @GetMapping
+    fun getTime(): Mono<TimeVO> = Mono.just(timeService.currentTime())
+
     @PostMapping
     fun changeTime(@RequestBody timeRq: TimeRq): Mono<*> = Mono.just(timeService.changeTime(timeRq.action))
 
